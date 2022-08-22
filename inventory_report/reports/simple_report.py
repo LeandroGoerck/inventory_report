@@ -16,7 +16,7 @@
 
 
 from collections import Counter
-import datetime
+
 
 class SimpleReport:
     @classmethod
