@@ -20,8 +20,7 @@ from collections import Counter
 
 class SimpleReport:
     @classmethod
-    def generate(cls, product_list):
-        # min(iterable, *[, key=lambda x:x)[]
+    def generate(self, product_list):
         oldest_manufacturing_date = min(
             product_list, key=lambda x: x["data_de_fabricacao"]
         )["data_de_fabricacao"]
@@ -39,3 +38,8 @@ class SimpleReport:
             f"Data de validade mais próxima: {closest_expiration_date}\n"
             f"Empresa com mais produtos: {company_with_more_products}"
         )
+
+
+# Data de fabricação mais antiga: YYYY-MM-DD
+# Data de validade mais próxima: YYYY-MM-DD
+# Empresa com mais produtos: NOME DA EMPRESA
