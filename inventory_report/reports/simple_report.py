@@ -32,14 +32,9 @@ class SimpleReport:
         company_with_more_products = Counter(
             product["nome_da_empresa"] for product in product_list
         ).most_common()[0][0]
-        
+
         return (
             f"Data de fabricação mais antiga: {oldest_manufacturing_date}\n"
             f"Data de validade mais próxima: {closest_expiration_date}\n"
             f"Empresa com mais produtos: {company_with_more_products}"
         )
-
-
-# Data de fabricação mais antiga: YYYY-MM-DD
-# Data de validade mais próxima: YYYY-MM-DD
-# Empresa com mais produtos: NOME DA EMPRESA
